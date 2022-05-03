@@ -17,17 +17,18 @@ const Carousel = () => {
       let slidesArray = [];
       for (const [index, element] of images.entries()) {
         slidesArray.push(
-          <SwiperSlide>
-            <img
-              src={element.ImageUrl}
-              alt={element.alt}
-              key={`slide-${index + 1}`}
-              className="swiper_img"
-            ></img>
-            <div className="swiper_text">
-              <h2 className="swiper_title">{element['Title']}</h2>
-              <p className="swiper_subtitle">{element['Subtitle']}</p>
-              <button>Contact us</button>
+          <SwiperSlide key={`slide-${index + 1}`}>
+            <div
+              style={{
+                backgroundImage: `linear-gradient(to right, #000000B3, #00000000), url(${element.ImageUrl})`,
+              }}
+              className="custom_swiper_slide"
+            >
+              <div className="swiper_text">
+                <h2>{element['Title']}</h2>
+                <p>{element['Subtitle']}</p>
+                <button>Contact us</button>
+              </div>
             </div>
           </SwiperSlide>
         );
