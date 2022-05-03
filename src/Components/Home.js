@@ -13,24 +13,28 @@ const Home = () => {
             src={office}
             alt="a colourful, empty office space with high wooden ceiling and large windows"
           ></img>
-          <h3>Justo petentium te vix, scripta regione urbanitas</h3>
-          <p>
-            Populo factam no dolor doleniti deseruisse necum, nam quodsi aliquam
-            eligendi ne: Ferri eu accuatate nec, summo accumsan at vi s legere
-            inperut, nam consequat forms No sitcomuage voluptatibus,
-            omniumluctus metarecteu detset sedanec odio option, fem assum eum o
-          </p>
-          <ul>
-            <li>Te pefficienti assuever, it molestle suavitate per</li>
-            <li>
-              Te nam dolorem rationibus repudiandan, ne lus fallaluip consetetur
-            </li>
-            <li>Ut qui dicant copiosaeinterpretaris </li>
-            <li>
-              Ut indoctum patrioque voluptaria duo. ut vis semper abhorreant
-            </li>
-          </ul>
-          <button>Learn more</button>
+          <div className="home_section1_text">
+            <h3>Justo petentium te vix, scripta regione urbanitas</h3>
+            <p>
+              Populo factam no dolor doleniti deseruisse necum, nam quodsi
+              aliquam eligendi ne: Ferri eu accuatate nec, summo accumsan at vi
+              s legere inperut, nam consequat forms No sitcomuage voluptatibus,
+              omniumluctus metarecteu detset sedanec odio option, fem assum eum
+              o
+            </p>
+            <ul>
+              <li>Te pefficienti assuever, it molestle suavitate per</li>
+              <li>
+                Te nam dolorem rationibus repudiandan, ne lus fallaluip
+                consetetur
+              </li>
+              <li>Ut qui dicant copiosaeinterpretaris </li>
+              <li>
+                Ut indoctum patrioque voluptaria duo. ut vis semper abhorreant
+              </li>
+            </ul>
+            <button>Learn more</button>
+          </div>
         </section>
         <section className="home_section2">
           <img src={model} alt="woman with round sunglasses pouting"></img>
