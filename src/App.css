@@ -28,6 +28,7 @@
 .swiper{
   width: 100vw;
   height: 300px;
+
 }
 
 /* Home */
@@ -95,4 +96,8 @@ button {
   padding: var(--inline-spacing);
   color: white;
   background: #2197e0;
+}
+
+body {
+  margin:0;
 }
