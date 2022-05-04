@@ -1,5 +1,6 @@
 import 'swiper/css/bundle';
 import 'swiper/css/autoplay';
+import '../Styling/carousel.css';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination, Autoplay } from 'swiper';
 import { fetchCarouselImages } from '../api';

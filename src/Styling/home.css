@@ -1,0 +1,129 @@
+/* Home */
+
+.home_section1{
+    margin: var(--block-spacing) var(--long-inline-spacing) var(--block-spacing) var(--long-inline-spacing);
+  }
+  
+  .home_section1 img {
+    object-fit: cover;
+    width: 100%;
+  }
+  
+  .home_section2{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 450px;
+    background-image: url('../Media/trendy_woman.jpg');
+    background-size: cover;
+    background-position-x: -125px;
+  }
+
+  .home_section2_mask{
+    position: relative;
+    background:#00000080;
+    border-radius: 3px;
+    height: 400px - calc(var(--short-inline-spacing)*2);
+  }
+  
+  .home_section2_text_container {
+    z-index: 1;
+    margin-left: var(--short-inline-spacing);
+    margin-right: var(--short-inline-spacing);
+  }
+  
+  .home_section2_text{
+    color: white;  
+    margin:var(--short-inline-spacing);
+    padding-top: 2px;
+    padding-bottom: var(--short-inline-spacing);
+  }
+  
+  .home_section2 button {
+    background-color: #eff7ff;
+    color: #2197e0;
+  }
+
+  .home_section2 h3 {
+    color:white;
+  }
+
+  .home_section2 p {
+    margin-bottom: calc(1.5*(var(--short-inline-spacing)));
+  }
+  
+  .home_section3{
+    margin: var(--short-inline-spacing) var(--long-inline-spacing) var(--short-inline-spacing) var(--long-inline-spacing);
+  }
+
+  .home_section3 p {
+    margin-bottom: var(--short-inline-spacing);
+  }
+
+  .home_section3 h3 {
+    margin-bottom:0px;
+    text-align: center;
+  }
+
+  .home_section3 h4 {
+    color: #404040;
+    margin-top:0px;
+    text-align: center;
+  }
+
+  .home_section3_para1 {
+    color:#404040;
+    font-weight: normal;
+  }
+
+  .home_section3 button {
+    margin-top: calc(var(--short-inline-spacing)/2);
+  }
+
+
+  @media(min-width: 480px){
+    .home_section1{
+        display: flex;
+        flex-direction: row-reverse;
+        height:400px;
+      }
+      .home_section1 img{
+        width: 45%;
+        margin-left: var(--block-spacing)
+      }
+      .home_section1 h3{
+        margin-block-start: 0px;
+      }
+      .home_section1 button{
+        margin-top: calc(2*(var(--short-inline-spacing)));
+        
+      }
+      .home_section1_text{
+        height:100%;
+      }
+      .home_section1 ul{
+        margin-top:calc(1.5*(var(--short-inline-spacing)));
+      }
+      .home_section2{
+        height: 550px;
+        width: 100vw;
+        flex-direction: row;
+        justify-content: flex-start;
+        background-position-x:0px;
+        background-position-y: -85px;
+      }
+      .home_section2_text_container{
+        width:33vw;
+        margin-left: var(--long-inline-spacing);
+      }
+      .home_section3_columns{
+        column-count: 3;
+        column-gap: 45px;
+      }
+      .home_section3_button_container{
+        display: flex;
+        justify-content: center;
+      }
+  }

@@ -1,0 +1,11 @@
+/* Footer */
+
+.footer{
+    padding: var(--short-inline-spacing);
+    text-align: center;
+    color: grey;
+  }
+
+  .footer p {
+    margin-top: var(--short-inline-spacing);
+  }

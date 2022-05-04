@@ -1,0 +1,72 @@
+
+:root {
+  /* Variables used for consistent spacing */
+  --short-inline-spacing: 22px;
+  --long-inline-spacing: 22px;
+  --block-spacing: 44px;
+}
+
+/* General */
+
+button {
+  width: 100%;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+  padding: var(--short-inline-spacing);
+  color: white;
+  background: #2197e0;
+}
+
+body {
+  margin:0;
+  font-family: "Inv Maison Neue","Maison Neue",-apple-system,BlinkMacSystemFont,"Open Sans",open-sans,sans-serif;
+  font-size: 13px;
+  color:grey;
+  line-height: 1.6;
+  font-weight:300;
+}
+
+h2{
+  font-size:40px;
+  font-weight:300;
+}
+
+h3 {
+  color: #404040;
+  font-size: 20px;
+  font-weight:normal;
+}
+
+ul {
+  list-style-position: inside;
+  padding-left: 0px;
+  color: #404040;
+  padding-top: calc(var(--short-inline-spacing)/3);
+  padding-bottom: calc(var(--short-inline-spacing)/3);
+}
+
+li::before {
+  content: '';
+  margin-left: -10px;
+}
+
+
+
+/* Desktop */
+
+@media(min-width: 480px){
+  :root {
+    --long-inline-spacing: 300px;
+    --block-spacing: 55px;
+  }
+  body{
+    line-height:2;
+    font-size: 14px;
+    font-weight:300;
+  }
+  button{
+    width:170px;
+  }
+}
+
