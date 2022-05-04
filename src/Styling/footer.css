@@ -3,7 +3,7 @@
 .footer{
     padding: var(--short-inline-spacing);
     text-align: center;
-    color: grey;
+    color: #B5B5B5;
   }
 
   .footer p {

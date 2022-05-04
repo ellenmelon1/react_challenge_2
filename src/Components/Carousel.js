@@ -5,6 +5,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import SwiperCore, { Pagination, Autoplay } from 'swiper';
 import { fetchCarouselImages } from '../api';
 import { useState, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 SwiperCore.use([Pagination, Autoplay]);
 
@@ -28,7 +29,9 @@ const Carousel = () => {
               <div className="swiper_text">
                 <h2>{element['Title']}</h2>
                 <p>{element['Subtitle']}</p>
-                <button>Contact us</button>
+                <Link to="/contact-us">
+                  <button>Contact us</button>
+                </Link>
               </div>
             </div>
           </SwiperSlide>

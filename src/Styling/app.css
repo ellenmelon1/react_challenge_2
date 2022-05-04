@@ -4,6 +4,7 @@
   --short-inline-spacing: 22px;
   --long-inline-spacing: 22px;
   --block-spacing: 44px;
+  width: 100vw;
 }
 
 /* General */

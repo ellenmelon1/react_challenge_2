@@ -1,6 +1,7 @@
 import Carousel from './Carousel';
 import '../Styling/home.css';
 import office from '../Media/office.jpg';
+import { Link } from 'react-router-dom';
 
 const Home = () => {
   return (
@@ -96,7 +97,9 @@ const Home = () => {
             </p>
           </div>
           <div className="home_section3_button_container">
-            <button>Contact us</button>
+            <Link to="/contact-us">
+              <button>Contact us</button>
+            </Link>
           </div>
         </section>
       </div>
