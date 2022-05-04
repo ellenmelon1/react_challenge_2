@@ -37,10 +37,19 @@ margin-top: 20px;
     height: 1.3rem;
 }
 
-.container button {
+.container button, .submit_button {
     width: 100%;
     padding:11px;
     font-size: 10px;
+}
+
+.submit_button{
+    background-color: #2197e0 !important;
+    color: white;
+    height: 33px !important;
+    font-weight: bold !important;
+    border: none !important;
+
 }
 
 .add_phone{
@@ -71,4 +80,19 @@ margin-top: 20px;
 
 .container textarea {
     height: calc(4*(1.3rem));
+}
+
+.submit_img{
+    height: 12px;
+    position:relative;
+    left: 10px;
+    bottom: 25px;
+}
+
+.error_msg{
+    color: red;
+}
+
+.message_error_msg{
+    margin-top: -10px;
 }
