@@ -10,7 +10,7 @@
     flex-direction: column;
     height: 100%;
     background-size: cover;
-    background-position-x: 10%;
+    background-position-x: 55%;
     color: white;
     padding:var(--short-inline-spacing) var(--long-inline-spacing) var(--short-inline-spacing) var(--long-inline-spacing);
     justify-content: center;
@@ -29,7 +29,7 @@
         height: 550px;
       }
     .custom_swiper_slide{
-      background-position-y:-225px;
+      background-position-y:-190px;
     }
     .swiper_text p {
       font-size:25px;

@@ -4,12 +4,16 @@
     display: flex;
     justify-content: space-between;
     align-items:center;
-    margin: var(--short-inline-spacing) var(--long-inline-spacing) var(--short-inline-spacing) var(--long-inline-spacing);
+    margin: 10px var(--long-inline-spacing) 10px var(--long-inline-spacing);
     }
   
   .header_logo{
     width: auto;
     height: 25px;
+  }
+
+  .logo_container{
+    padding-top:5px;
   }
 
   /* Phone */

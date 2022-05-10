@@ -4,8 +4,8 @@ import '../Styling/header.css';
 
 const Header = () => {
   return (
-    <section className="header_container">
-      <div>
+    <nav className="header_container">
+      <div className="logo_container">
         <Link to="/" className="header_logo_link">
           <img src={logo} alt="company logo" className="header_logo"></img>
         </Link>
@@ -22,7 +22,7 @@ const Header = () => {
         </Link>
         <button className="header_button">Log in</button>
       </div>
-    </section>
+    </nav>
   );
 };
 

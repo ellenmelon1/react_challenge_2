@@ -1,6 +1,7 @@
 .container{
-    padding: 0px var(--short-inline-spacing) var(--short-inline-spacing) var(--short-inline-spacing);
+    padding: 0px var(--short-inline-spacing) calc(0.5*(var(--short-inline-spacing))) var(--short-inline-spacing);
     color: #404040;
+    min-height: 67vh;
 }
 
 .container hr {
@@ -55,7 +56,6 @@ margin-top: 20px;
 .add_phone{
     background-color: #eff7ff;
     color: #2197e0;
-    margin-top: 5px;
 }
 
 .container input label {
@@ -96,3 +96,257 @@ margin-top: 20px;
 .message_error_msg{
     margin-top: -10px;
 }
+
+.message_sent{
+    background-color: #e9f4da;
+    display: flex;
+    flex-direction: column;
+}
+
+.message_sent p {
+    text-align: center;
+    margin: 0px;
+}
+
+#message_sent_bold{
+    font-weight: 500;
+    font-size: 14px;
+}
+
+.message_sent img {
+    height: 28px;
+    width: 28px;
+    background-color: #8dc73d;
+    padding: 5px;
+    border-radius: 50%;
+    align-self: center;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+#message_sent_normal{
+    margin-top: 3px;
+    margin-bottom: 33px;
+}
+
+.field_visible_true{
+    display: flex;
+flex-direction:column;
+}
+
+.field_visible_false{
+    display: none;
+}
+
+.radio_container{
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    margin-left: -17px;
+    padding-bottom: calc(0.5*(var(--short-inline-spacing)));
+}
+
+/* Create a custom radio button */
+.checkmark{
+    position: relative;
+    left: 17px;
+    height: 17px;
+    width: 17px;
+    background-color: #f8f9fc;
+    border-radius: 3px;
+    border-color: lightgrey;
+    border-style: solid;
+    border-width: 1px;
+}
+
+.radio_container input:checked ~ .checkmark {
+    background-color: #2197e0;
+  }
+
+/* Create the indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: block;
+  }
+
+/* Show the indicator when checked */
+.radio_container input:checked ~ .checkmark:after {
+    display: block;
+  }
+
+/* Style the indicator */
+.radio_container .checkmark:after {
+    top: 2px;
+    left: 2px;
+    width: 13px;
+    height: 13px;
+    border-radius: 3px;
+    background: #2197e0;
+  }
+
+  .radio_text {
+      margin-left: 5px;
+  }
+  .add_address_visible_false{
+      display: none;
+  }
+
+  .message-too-long-true{
+      color: red;
+  }
+
+  /* Address section */
+  .add_address_visible_true{
+      display:grid;
+      grid-template-columns: auto auto;
+      grid-template-rows: 60px 60px 70px 70px;
+      column-gap: var(--short-inline-spacing);
+      row-gap: 0px;
+      align-items: center;
+  }
+
+  .addressOne {
+      grid-column-start:1;
+      grid-column-end:3;
+      grid-row-start: 1;
+      grid-row-end: 2;
+  }
+
+  .addressTwo{
+    grid-column-start:1;
+    grid-column-end:3;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+
+  .phoneOne {
+      margin: 0px;
+  }
+
+  .email{
+      margin-bottom: 0px;
+      margin-top: 0px;
+  }
+
+  .name{
+      margin-bottom: 0px;
+  }
+
+  @media(min-width: 480px){
+    .background{
+        background-image: url('../Media/Img_Contact.png');
+        background-size: 580px;
+        background-repeat: no-repeat;
+        background-position-x: 85%;
+        background-position-y: 65%;
+    }
+    .container{
+        padding-left: var(--long-inline-spacing);
+        padding-right: 10px !important;
+        padding-top: 10px;
+        width: 40vw;
+        padding-right: 0px;
+        background-color: white;
+    }
+    .container p {
+        font-size: 13px;
+        font-weight: 500;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+    .container h1 {
+        font-weight: 300;
+        padding-top:30px;
+        padding-bottom: 15px;
+        font-size:27px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+    .name_and_email{
+        display: flex;
+        margin-bottom: 15px;
+    }
+    .name{
+        margin-right: calc(0.5*(var(--short-inline-spacing)));
+        width: 100%;
+    }
+    .email{
+        margin-left: calc(0.5*(var(--short-inline-spacing))); 
+        width: 100%;
+        justify-content: end;
+    }
+    .add_address_visible_true{
+        display:grid;
+        grid-template-columns: 21% 21% 21% 21%;
+        grid-template-rows: 85px 85px;
+        column-gap: 5.33%;
+        row-gap: 5px;
+        align-items: flex-start;
+        padding-bottom: 10px;
+    }
+    .addressOne {
+        grid-column-start: 1;
+        grid-column-end: 3;
+    }
+    .addressTwo {
+        grid-column-start: 3;
+        grid-column-end: 5;
+        grid-row-start: 1;
+        grid-row-end: 2;
+    }
+    .container input{
+        height: 2.5rem;
+    }
+    .container button{
+        padding-top: 15px;
+        padding-bottom: 15px;
+        text-align: center;
+        justify-content: center;
+    }
+    .submit_button{
+        padding-top: 20px;
+        padding-bottom: 32px;
+        font-size: 14px;
+        margin-top: 20px;
+    }
+.error_msg{
+    font-size: 12px !important;
+    margin: 0px !important;
+    font-weight: normal !important;
+  }
+  .add_phone{
+      margin-top: 20px;
+  }
+  .radio_container{
+      padding-bottom: 0px;
+      margin-bottom: -12px;
+  }
+  .container textarea {
+    height: calc(7*(1.3rem));
+}
+.container label {
+    font-size: 12px;
+}
+.container button {
+    font-size: 14px;
+}
+.white_space_needed_true{
+    height: 185px;
+}
+.max_text_length_msg{
+    font-weight: 300 !important;
+}
+.submit_img{
+    height: 17px;
+    left: 15px;
+    bottom: 36px;
+}
+}
+
+
+
+
+

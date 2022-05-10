@@ -33,7 +33,9 @@ const Home = () => {
                 Ut indoctum patrioque voluptaria duo. ut vis semper abhorreant
               </li>
             </ul>
-            <button>Learn more</button>
+            <Link to="/about-us">
+              <button>Learn more</button>
+            </Link>
           </div>
         </section>
         <section className="home_section2">
@@ -58,7 +60,7 @@ const Home = () => {
           </div>
         </section>
         <section className="home_section3">
-          <h3>Sed libero justo, lobortis sit amet suscipit non.</h3>
+          <h3>Sed libero justo, lobortis sit amet suscipit non</h3>
           <h4>taria duo ut vis semper abhorreant</h4>
           <div className="home_section3_columns">
             <p className="home_section3_para1">

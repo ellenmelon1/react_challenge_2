@@ -1,7 +1,7 @@
 /* Footer */
 
 .footer{
-    padding: var(--short-inline-spacing);
+    padding: 0px var(--short-inline-spacing) var(--short-inline-spacing) var(--short-inline-spacing);
     text-align: center;
     color: #B5B5B5;
   }
@@ -9,3 +9,16 @@
   .footer p {
     margin-top: var(--short-inline-spacing);
   }
+  .footer hr {
+    margin-top: 0px;
+  }
+
+@media(min-width: 480px){
+  .footer{
+    text-align:end;
+}
+.footer p {
+  margin-right: var(--long-inline-spacing);
+}
+
+}

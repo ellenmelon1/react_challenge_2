@@ -58,7 +58,7 @@ li::before {
 
 @media(min-width: 480px){
   :root {
-    --long-inline-spacing: 300px;
+    --long-inline-spacing: 110px;
     --block-spacing: 55px;
   }
   body{

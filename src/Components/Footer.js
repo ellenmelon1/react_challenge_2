@@ -2,12 +2,12 @@ import '../Styling/footer.css';
 
 const Footer = () => {
   return (
-    <div className="footer">
+    <footer className="footer">
       <hr></hr>
       <p>
         Website Development by <u>AVAMAE</u>
       </p>
-    </div>
+    </footer>
   );
 };
 
