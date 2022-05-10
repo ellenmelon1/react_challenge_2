@@ -12,38 +12,50 @@ SwiperCore.use([Pagination, Autoplay]);
 const Carousel = () => {
   const [isLoading, setIsLoading] = useState(true);
   const [slides, setSlides] = useState();
+  const [errorMessage, setErrorMessage] = useState();
 
   useEffect(() => {
-    fetchCarouselImages().then((images) => {
-      setSlides(images);
-      let slidesArray = [];
-      for (const [index, element] of images.entries()) {
-        slidesArray.push(
-          <SwiperSlide key={`slide-${index + 1}`}>
-            <div
-              style={{
-                backgroundImage: `linear-gradient(to right, #000000B3, #00000000), url(${element.ImageUrl})`,
-              }}
-              className="custom_swiper_slide"
-            >
-              <div className="swiper_text">
-                <h2>{element['Title']}</h2>
-                <p>{element['Subtitle']}</p>
-                <Link to="/contact-us">
-                  <button>Contact us</button>
-                </Link>
+    fetchCarouselImages()
+      .then((images) => {
+        setSlides(images);
+        let slidesArray = [];
+        for (const [index, element] of images.entries()) {
+          slidesArray.push(
+            <SwiperSlide key={`slide-${index + 1}`}>
+              <div
+                style={{
+                  backgroundImage: `linear-gradient(to right, #000000B3, #00000000), url(${element.ImageUrl})`,
+                }}
+                className={`custom_swiper_slide custom_slide${index + 1}`}
+              >
+                <div className="swiper_text">
+                  <h2>{element['Title']}</h2>
+                  <p>{element['Subtitle']}</p>
+                  <Link to="/contact-us">
+                    <button>Contact us</button>
+                  </Link>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-        );
-      }
-      setSlides(slidesArray);
-      setIsLoading(false);
-    });
+            </SwiperSlide>
+          );
+        }
+        setSlides(slidesArray);
+        setIsLoading(false);
+      })
+      .catch((err) => {
+        setErrorMessage(err);
+        setIsLoading(false);
+      });
   }, []);
 
   return isLoading ? (
-    <p>Loading...</p>
+    <div className="carousel_loading">
+      <p>Loading...</p>
+    </div>
+  ) : errorMessage ? (
+    <div className="carousel_error_message">
+      <p>{errorMessage}</p>
+    </div>
   ) : (
     <div>
       <Swiper

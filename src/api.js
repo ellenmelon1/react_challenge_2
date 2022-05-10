@@ -11,7 +11,7 @@ export const fetchCarouselImages = () => {
       return res.data['Details'];
     })
     .catch((err) => {
-      console.log(err);
+      throw new Error(err.message);
     });
 };
 
@@ -56,10 +56,9 @@ export const contactUs = (formValues, addAddress) => {
   return api
     .post('/api/v1/contact-us/submit', postObject)
     .then((res) => {
-      console.log('res: ', res);
       return res.data;
     })
     .catch((err) => {
-      console.log('err: ', err);
+      throw new Error(err.message);
     });
 };

@@ -25,10 +25,14 @@ const Contact = () => {
   const [addPhone, setAddPhone] = useState(false);
   const [addAddress, setAddAddress] = useState(false);
   const [messageColour, setMessageColour] = useState(false);
+  const [errorMessage, setErrorMessage] = useState();
 
   useEffect(() => {
     if (Object.keys(formErrors).length === 0 && isSubmit) {
-      contactUs(formValues, addAddress);
+      contactUs(formValues, addAddress).catch((err) => {
+        setErrorMessage(err);
+        setIsSubmit(false);
+      });
     } else {
       setIsSubmit(false);
     }
@@ -115,7 +119,11 @@ const Contact = () => {
     return errors;
   };
 
-  return (
+  return errorMessage ? (
+    <div className="contact_error_message">
+      <p>{errorMessage + ' Please try again'}</p>
+    </div>
+  ) : (
     <div className="background">
       <hr></hr>
       <div className="container">

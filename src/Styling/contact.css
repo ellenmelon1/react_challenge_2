@@ -234,6 +234,12 @@ flex-direction:column;
       margin-bottom: 0px;
   }
 
+  .contact_error_message{
+      margin: var(--short-inline-spacing);
+      height: 75vh;
+      font-size:15px;
+  }
+
   @media(min-width: 480px){
     .background{
         background-image: url('../Media/Img_Contact.png');
@@ -343,6 +349,11 @@ flex-direction:column;
     height: 17px;
     left: 15px;
     bottom: 36px;
+}
+.contact_error_message{
+    margin: var(--long-inline-spacing);
+    height: 65vh;
+    font-size: 20px;
 }
 }
 

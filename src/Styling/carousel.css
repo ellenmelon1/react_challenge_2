@@ -24,12 +24,37 @@
     margin-bottom: -(calc(-2*(var(--short-inline-spacing))))
   }
 
+  .carousel_loading{
+    height:450px;
+    width:100%;
+    margin-left:var(--short-inline-spacing)
+  }
+  .carousel_error_message{
+    height: 450px;
+    width: 100%;
+    margin-left:var(--short-inline-spacing);
+  }
+
   @media(min-width: 480px){
     .swiper{
-        height: 550px;
-      }
+      height: 550px;
+    }
+    .carousel_loading{
+      height:550px;
+      width:100%;
+      margin-left:var(--long-inline-spacing)
+    }
+    .carousel_error_message{
+      height:550px;
+      width:100%;
+      margin-left:var(--long-inline-spacing)
+    }
     .custom_swiper_slide{
       background-position-y:-190px;
+    }
+    .custom_slide3{
+      background-position-y:25%;
+      background-position-x:20%;
     }
     .swiper_text p {
       font-size:25px;
